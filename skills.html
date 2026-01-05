@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skills | Samruddhi Vilas Wagare</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+<div class="nav-minimal">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="skills.html"class="active">Skills</a>
+  <a href="projects.html">Projects</a>
+  <a href="certifications.html">Certifications</a>
+</div>
+
+  <!-- SKILLS SECTION -->
+<section class="skills-section">
+
+  <h1 class="section-title">Skills</h1>
+  <p class="section-subtitle">
+    Skills I actively apply and strengthen through projects and leadership.
+  </p>
+
+  <!-- SKILLS GRID -->
+  <div class="skills-grid">
+
+    <!-- CARD 1 -->
+    <div class="skills-grid">
+
+  <div class="flip-card programming">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>💻 Programming Languages</h3>
+      </div>
+      <div class="flip-card-back">
+        <ul>
+          <li>Python (Data Analysis & ML Foundations)</li> 
+          <li>R Programming (Statistical Computing)</li> 
+          <li>C++ (Object-Oriented Concepts)</li> 
+          <li>C (Core Programming & Logic Building)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card ai">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>🧠 AI & Machine Learning</h3>
+      </div>
+      <div class="flip-card-back">
+        <ul>
+         <li>Machine Learning Algorithms & Concepts</li> 
+         <li>Data Preprocessing & Feature Engineering</li> 
+         <li>Model Training, Testing & Evaluation</li> 
+         <li>AI, Big Data & Statistical Fundamentals</li>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card web">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>🌐 Web Technologies</h3>
+      </div>
+      <div class="flip-card-back">
+        <ul>
+          <li>HTML5 (Semantic & Responsive Design)</li>
+          <li>CSS3 (Layouts, Styling & Animations)</li>
+          <li>JavaScript (Basic Interactivity & DOM)<li> JavaScript<span class="level">Advanced</span></li></li>
+          <li>PHP (Server-Side Fundamentals)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card iot">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>🔧 IoT & Tools</h3>
+      </div>
+      <div class="flip-card-back">
+        <ul>
+          <li>IoT Sensors & Microcontrollers</li>
+          <li>Arduino Uno, ESP8266 / ESP32</li>
+          <li>Git & GitHub (Version Control)</li>
+          <li>VS Code & Jupyter Notebook</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card cs">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>📚 Core CS & Professional Skills</h3>
+      </div>
+      <div class="flip-card-back">
+        <h3>Core CS & Professional Skills</h3>
+        <ul>
+          <li>Data Structures, DBMS, OS (Fundamentals)</li>
+          <li>Problem Solving & Analytical Thinking</li>
+          <li>Leadership & Team Management</li>
+          <li>Communication & Presentation Skills</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<script>
+  document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.querySelector('.flip-card-inner').classList.toggle('flipped');
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,561 @@
+/* ------------------------------------------------------------------------- HOME PAGE ------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* MULTI-GRADIENT BACKGROUND */
+body {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(37, 99, 235, 0.12), transparent 35%),
+    radial-gradient(circle at 85% 20%, rgba(14, 165, 233, 0.10), transparent 40%),
+    radial-gradient(circle at 70% 85%, rgba(37, 99, 235, 0.08), transparent 45%),
+    #ffffff;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+}
+
+/* LEFT TEXT */
+.hero-text {
+  padding-left: 24px;
+  border-left: 4px solid #d41578;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  font-size: 24px;
+  color: #222;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #475569;
+  max-width: 420px;
+}
+
+/* PROFILE IMAGE */
+.hero-profile {
+  text-align: center;
+}
+
+.hero-profile img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+  border: 2px solid #d41578;
+  background-color: white;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.25);
+}
+
+/* BUTTONS BELOW PHOTO */
+.profile-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn.primary {
+  background: #d41578;
+  color: white;
+}
+
+.btn.secondary {
+  background: #ffffff;
+  color: #d41578;
+  border: 2px solid #d41578;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+/* INLINE CONTACT DETAILS */
+.contact-details {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #334155;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.35s ease;
+}
+
+.contact-details.show {
+  max-height: 220px;
+  opacity: 1;
+}
+
+.contact-details p {
+  margin-bottom: 6px;
+}
+
+.contact-details a {
+  color: #d41578;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-buttons {
+    position: static;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .hero-profile {
+    margin-top: 30px;
+  }
+
+  .hero-text {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+.hero-focus {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #64748b;
+  letter-spacing: 0.5px;
+}
+
+.hero-text {
+  animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
+/* ================= PROJECTS PAGE ================= */
+
+.projects-section {
+  min-height: 100vh;
+  padding: 120px 80px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.project-card {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.18);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color:#d41578;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.tech-stack span {
+  background: #e0e7ff;
+  color: #d41578;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.project-card a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #d41578;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 120px 30px;
+  }
+}
+
+
+/* ------------------------------------------------------------------------- ABOUT PAGE ------------------------------------------------------------------------- */
+.about-section {
+  min-height: 100vh;
+  padding: 120px 80px;
+}
+
+.about-content {
+  max-width: 800px;
+}
+
+.about-content p {
+  font-size: 16px;
+  color: #334155;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.about-content h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #d41578;
+}
+
+.about-content ul {
+  padding-left: 20px;
+}
+
+.about-content li {
+  font-size: 15px;
+  color: #334155;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-section {
+    padding: 120px 30px;
+  }
+}
+
+.about-highlight {
+  background: rgba(37, 99, 235, 0.08);
+  border-left: 4px solid #d41578;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  font-size: 15px;
+  color: #1e293b;
+  border-radius: 6px;
+}
+
+
+/* ======================= SKILLS SECTION ======================= */
+
+.skills-section {
+  min-height: 100vh;
+  padding: 120px 80px;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+  border-left: 4px solid #d41578;
+  padding-left: 16px;
+}
+
+.section-subtitle {
+  color: #475569;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* ======================= FLIP CARD ======================= */
+
+.flip-card {
+  perspective: 1200px;
+  height: 240px;
+}
+
+/* ROTATION */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+/* HOVER FLIP (DESKTOP) */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT + BACK COMMON */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  display:grid;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* FRONT */
+.flip-card-front {
+  background: #ffffff;
+}
+
+.flip-card-front h3 {
+  font-size: 30px;
+  color: while;
+  text-align: center;
+}
+
+/* BACK */
+.flip-card-back {
+  transform: rotateY(180deg);
+  color: #ffffff;
+  text-align: left;
+  background-size:contain;
+  background-position: center;
+  position: relative;
+}
+
+/* DARK OVERLAY */
+.flip-card-back::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 16px;
+  z-index: 0;
+}
+
+/* CONTENT ABOVE OVERLAY */
+.flip-card-back * {
+  position: relative;
+  z-index: 1;
+}
+
+.flip-card-back ul {
+  padding-left: 18px;
+}
+
+.flip-card-back li {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* ======================= BACKGROUND IMAGES ======================= */
+
+.programming .flip-card-front {
+  background-image: url("images/programming.jpg");
+}
+
+.ai .flip-card-front{
+  background-image: url("images/ai.jpg");
+}
+
+.web .flip-card-front {
+  background-image: url("images/web.jpg");
+}
+
+
+.iot .flip-card-front {
+  background-image: url("images/iot.jpg");
+}
+
+.cs .flip-card-front {
+  background-image: url("images/cs.jpg");
+}
+
+//* ================= MINIMAL MOBILE FIX (NON-DESTRUCTIVE) ================= */ 
+
+@media (max-width: 768px) { /* Navbar wrap without redesign */ 
+.top-buttons { position: static; 
+  justify-content: center;
+   margin-bottom: 24px;
+    flex-wrap: wrap; } 
+    
+  /* Home hero stacks vertically */ 
+  .hero { 
+  flex-direction: column; 
+  text-align: center; 
+  padding: 40px 30px 60px; /* REDUCED top padding */
+}
+
+  /* Remove decorative border only on mobile */ 
+  .hero-text { 
+    border-left: none; 
+    padding-left: 0; 
+  } 
+  /* Scale text slightly (no style change) */ 
+  .hero-text h1 { font-size: 32px; } 
+  .hero-text h2 { font-size: 20px; } 
+  /* Image fits small screens */ 
+  .hero-profile img { width: 200px; height: 200px; } 
+  /* Buttons don’t overflow */ 
+  .profile-buttons { flex-wrap: wrap; } }
+
+/* ================= CONNECT BAR ================= */
+
+.connect-bar {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* BUTTON BASE */
+/* FORCE WHITE ICON + TEXT INSIDE CONNECT BUTTONS */
+.connect-btn,
+.connect-btn i,
+.connect-btn span {
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.connect-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+/* BRAND COLORS */
+.connect-btn.email { background: #d15f54; }
+.connect-btn.github { background: #7da5cc; }
+.connect-btn.linkedin { background: #0077b5; }
+.connect-btn.kaggle { background: #20beff; }
+.connect-btn.whatsapp { background: #25d366; }
+
+/* MOBILE STACK FIX */
+@media (max-width: 768px) {
+  .connect-bar {
+    justify-content: center;
+  }
+}
+
+
+/* FIX LINK CLICK ISSUE (IMPORTANT) */
+.connect-btn {
+  position: relative;
+  z-index: 999;
+  pointer-events: auto;
+}
+ 
+.connect-bar {
+  position: relative;
+  z-index: 999;
+}
+
+/*certification page*/
+.cert-provider {
+  font-size: 12px;
+  color: #d41578;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* ================= NAV BAR – BOX BUTTON STYLE ================= */
+
+.nav-minimal {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 14px;
+  z-index: 1000;
+}
+
+/* BUTTON BOX */
+.nav-minimal a {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(136, 3, 87, 0.35);
+  border: 1px solid rgba(108, 7, 106, 0.358);
+  color: #d41578;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* HOVER EFFECT (NO SIZE CHANGE) */
+.nav-minimal a:hover {
+  background: #d41578;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(136, 3, 87, 0.35);
+}
+
+/* ACTIVE PAGE (OPTIONAL BUT RECOMMENDED) */
+.nav-minimal a.active {
+  background: #d41578;
+  color: #ffffff;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .nav-minimal {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

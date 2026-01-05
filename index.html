@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samruddhi Vilas Wagare | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+<div class="nav-minimal">
+  <a href="index.html" class="active"s>Home</a>
+  <a href="about.html">About</a>
+  <a href="skills.html">Skills</a>
+  <a href="projects.html">Projects</a>
+  <a href="certifications.html">Certifications</a>
+</div>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+
+    <!-- LEFT TEXT -->
+    <div class="hero-text">
+      <h1>Hi,<br>I'm Samruddhi Vilas Wagare</h1>
+      <h2>AI & ML Engineer</h2>
+      <p class="hero-focus">
+       AI • Machine Learning • Cyber Awareness • Leadership
+    </p>
+
+      <p class="tagline">
+        Transforming data into intelligent solutions that drive innovation.
+      </p>
+    </div>
+
+    <!-- RIGHT PROFILE -->
+    <div class="hero-profile">
+      <img src="samruddhi photo.jpg" alt="Samruddhi Vilas Wagare">
+
+      <!-- BUTTONS -->
+      <div class="profile-buttons">
+       <a href="#" class="btn primary" onclick="toggleContact(event)">Let's Connect</a>
+        <a href="Samruddhi_Wagare_Resume.pdf" class="btn secondary" target="_blank">
+           View Resume
+        </a>
+
+      </div>
+
+      <!-- CONTACT DETAILS -->
+      <div id="contactDetails" class="contact-details">
+
+  <div class="connect-bar">
+
+    <a href="mailto:samruddhiwagare98@gmail.com" class="connect-btn email">
+      <i class="fas fa-envelope"></i> Email
+    </a>
+
+    <a href="https://github.com/samruddhi-wagare" target="_blank" class="connect-btn github">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+
+    <a href="https://www.linkedin.com/in/samruddhi-wagare-414857327/" target="_blank" class="connect-btn linkedin">
+      <i class="fab fa-linkedin-in"></i> LinkedIn
+    </a>
+
+    <a href="https://www.kaggle.com/samruddhiwagare" target="_blank" class="connect-btn kaggle">
+      <i class="fab fa-kaggle"></i> Kaggle
+    </a>
+
+    <a href="https://wa.me/917058181350" target="_blank" class="connect-btn whatsapp">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+
+  </div>
+
+</div>
+
+    </div>
+
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleContact(event) {
+      event.preventDefault();
+      document.getElementById("contactDetails").classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
